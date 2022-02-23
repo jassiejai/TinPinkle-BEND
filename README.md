@@ -3,7 +3,9 @@
 ## Project Idea: 
 
 ###  TinPinkle Apotohocary Shop 
-    Our Shop provides all your **Magical Herbalist** needs. Check out our spellbook for  ingredients list and shopping links. Search our database for information on different *Creatures* and *Plants*.
+    Our Shop provides all your **Magical Herbalist** needs.
+    Check out our spellbook for  ingredients list and shopping links. 
+    Search our database for information on different *Creatures* and *Plants*.
     
 
 ##### User Stories :
