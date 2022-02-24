@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api")
@@ -26,5 +27,19 @@ public class AnimalController {
     @PostMapping("/animal")
     public Animal createAnimal(@RequestBody Animal animalObject){
         return animalService.createAnimal(animalObject);
+    }
+
+    @GetMapping("/animal/{animalId}")
+    public Optional<Animal> getAnimal(@PathVariable Long animalId){
+        return animalService.getAnimal(animalId);
+    }
+
+    @PutMapping("/animal/{animalId}")
+    public Animal updateAnimal(@PathVariable (value = "animamlId") Long animalId, @RequestBody Animal animalObject){
+        return animalService.updateAnimal(animalId, animalObject);
+    }
+    @DeleteMapping("/animal/{animalId}")
+    public Animal deleteAnimal(@PathVariable (value = "animamlId") Long animalId, @RequestBody Animal animalObject){
+        return animalService.deleteAnimal(animalId);
     }
 }
