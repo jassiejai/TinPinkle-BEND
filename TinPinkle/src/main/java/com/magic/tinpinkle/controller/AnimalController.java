@@ -40,7 +40,7 @@ public class AnimalController {
         return animalService.updateAnimal(animalId, animalObject);
     }
     @DeleteMapping("/animal/{animalId}")
-    public Animal deleteAnimal(@PathVariable (value = "animamlId") Long animalId, @RequestBody Animal animalObject){
+    public Animal deleteAnimal(@PathVariable (value = "animalId") Long animalId){
         return animalService.deleteAnimal(animalId);
     }
 }

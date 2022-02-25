@@ -2,6 +2,7 @@ package com.magic.tinpinkle.service;
 
 
 import com.magic.tinpinkle.model.Animal;
+import com.magic.tinpinkle.model.Plant;
 import com.magic.tinpinkle.repository.AnimalRepository;
 import jdk.dynalink.linker.LinkerServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,9 +50,11 @@ public class AnimalService {
     }
 
     public Animal deleteAnimal(Long animalId) {
-        Animal animal = animalRepository.findById(animalId).get();
 
-        return animal;
+        Animal dltAnimal = animalRepository.getById(animalId);
 
+        animalRepository.delete(dltAnimal);
+
+        return dltAnimal;
     }
 }
