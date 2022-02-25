@@ -36,7 +36,7 @@ public class AnimalController {
     }
 
     @PutMapping("/animal/{animalId}")
-    public Animal updateAnimal(@PathVariable (value = "animamlId") Long animalId, @RequestBody Animal animalObject){
+    public Animal updateAnimal(@PathVariable (value = "animalId") Long animalId, @RequestBody Animal animalObject){
         return animalService.updateAnimal(animalId, animalObject);
     }
     @DeleteMapping("/animal/{animalId}")
