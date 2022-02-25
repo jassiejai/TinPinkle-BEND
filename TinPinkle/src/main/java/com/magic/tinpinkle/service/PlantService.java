@@ -1,9 +1,7 @@
 package com.magic.tinpinkle.service;
 
 
-import com.magic.tinpinkle.model.Animal;
 import com.magic.tinpinkle.model.Plant;
-import com.magic.tinpinkle.repository.AnimalRepository;
 import com.magic.tinpinkle.repository.PlantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -52,9 +50,12 @@ public class PlantService {
     }
 
     public Plant deletePlant(Long plantId) {
-        Plant plant = plantRepository.findById(plantId).get();
+//        Plant plant = plantRepository.findByName(plantId);
 
-        return plant;
+        Plant dltPlant = plantRepository.getById(plantId);
 
+        plantRepository.delete(dltPlant);
+
+        return dltPlant;
     }
 }

@@ -1,6 +1,5 @@
 package com.magic.tinpinkle.controller;
 
-import com.magic.tinpinkle.model.Animal;
 import com.magic.tinpinkle.model.Plant;
 import com.magic.tinpinkle.service.PlantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +42,7 @@ public class PlantController {
         return plantService.updatePlants(plantId, plantObject);
     }
     @DeleteMapping("/plant/{plantId}")
-    public Plant deletePlant(@PathVariable (value = "plantId") Long plantId, @RequestBody Plant plantObject){
+    public Plant deletePlant(@PathVariable (value = "plantId") Long plantId){
         return plantService.deletePlant(plantId);
     }
 }
