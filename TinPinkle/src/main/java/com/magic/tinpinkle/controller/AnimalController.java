@@ -19,6 +19,7 @@ public class AnimalController {
     public void setAnimalService(AnimalService animalService) {
         this.animalService = animalService;
     }
+
     @GetMapping("/animals")
     public List<Animal> getAllAnimals() {
         return animalService.getAllAnimals();

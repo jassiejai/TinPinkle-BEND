@@ -28,9 +28,8 @@ public class PlantService {
 
     public Plant createPlant(Plant plantObject) {
 
-        Plant create = plantRepository.findByName(plantObject.getName());
 
-        return plantRepository.save(create);
+        return plantRepository.save(plantObject);
     }
 
     public Optional<Plant> getPlants(Long plantId) {
