@@ -27,9 +27,7 @@ public class AnimalService {
 
     public Animal createAnimal(Animal animalObject) {
 
-        Animal create = animalRepository.findByName(animalObject.getName());
-
-        return animalRepository.save(create);
+        return animalRepository.save(animalObject);
     }
 
     public Optional<Animal> getAnimal(Long animalId) {
