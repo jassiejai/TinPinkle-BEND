@@ -4,7 +4,6 @@ package com.magic.tinpinkle.service;
 import com.magic.tinpinkle.model.Animal;
 import com.magic.tinpinkle.model.Plant;
 import com.magic.tinpinkle.repository.AnimalRepository;
-import jdk.dynalink.linker.LinkerServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
